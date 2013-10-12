@@ -13,17 +13,13 @@ $template->header( 'Order Online', $css, 99 );
 
 ?>
 
-<script type = "text/javascript" 
-        src  = "js/randlib.js">
-		// hash code from http://members.aol.com/paypalhelper/hasher.html
-</script>
 <script type="text/javascript">
-<!-- 
+<!--
 // coupon code pulled from http://members.aol.com/paypalhelper/simpcoup.html
 var discnt = 0;   // no default percent discount
 
 var coupons = new Array (  // place to put coupon codes
-  "c43fc84e43e4a62f",      // 1st coupon hash - comma seperated
+  "2580538",      // 1st coupon hash - comma seperated
   "coup2",                 // 2nd coupon hash - add all you want
   "coup3"                  // 3rd coupon hash
 );
@@ -34,13 +30,25 @@ var coupdc  = new Array (  // place to put discounts for coupon vals
 );
 var coupval = "(blanket)"; // what user entered as coupon code
 
+String.prototype.hashCode = function(){
+    var hash = 0, i, char;
+    if (this.length == 0) return hash;
+    for (i = 0, l = this.length; i < l; i++) {
+        char  = this.charCodeAt(i);
+        hash  = ((hash<<5)-hash)+char;
+        hash |= 0; // Convert to 32bit integer
+    }
+    return hash;
+};
+
 function ChkCoup () {      // check user coupon entry
-var i,cv=Hash2(FixUTF(Conv(coupval)),8,1);  // calc hash of input
+    var i;
+    var cv = coupval.hashCode();  // calc hash of input
   discnt = 0;              // assume the worst
   for (i=0; i<coupons.length; i++) {
     if (cv == coupons[i]) {
       discnt = coupdc[i];  // remember the discount amt
-      alert ("Valid coupon code! \n\n" + discnt + 
+      alert ("Valid coupon code! \n\n" + discnt +
              "% discount now in effect.");
       return;
     }
@@ -79,8 +87,8 @@ var amt,des;
 <table border="1" class="form">
 
   <tr>
-	<td colspan="4" class="blue">Thank you for purchasing Mumbo<sup>&reg;</sup><span class="small">&reg;</span> Sauce. We know that you will enjoy the delectable, mouthwatering flavor that our 
-sauces offer. Remember, our Mumbo<sup>&reg;</sup> 3-packs and 6-packs make great gifts for the barbecue enthusiast on your gift list. We use Paypal to securely process all of our credit card transactions. You do not need a Paypal account to use 
+	<td colspan="4" class="blue">Thank you for purchasing Mumbo<sup>&reg;</sup> Sauce. We know that you will enjoy the delectable, mouthwatering flavor that our
+sauces offer. Remember, our Mumbo<sup>&reg;</sup> 3-packs and 6-packs make great gifts for the barbecue enthusiast on your gift list. We use Paypal to securely process all of our credit card transactions. You do not need a Paypal account to use
 this payment feature. To order, select the pack size and flavor combinations that you desire.<br />
 	</td>
   </tr>
@@ -102,7 +110,7 @@ this payment feature. To order, select the pack size and flavor combinations tha
   </tr>
   <tr class="trred">
   	<td colspan="4">Order Here</td>
-  </tr>  
+  </tr>
   <tr>
    <td>
 
@@ -115,7 +123,7 @@ this payment feature. To order, select the pack size and flavor combinations tha
   </tr>
   <tr>
     <td valign="middle">
-      <input type="hidden" name="on0" value="Flavor">Flavor: 
+      <input type="hidden" name="on0" value="Flavor">Flavor:
     </td>
     <td><select name="os0"><option value="Mumbo Original">Mumbo<sup>&reg;</sup> Original<option value="Mumbo Hickory">Mumbo<sup>&reg;</sup> Hickory<option value="Mumbo Tangy(Hot)">Mumbo<sup>&reg;</sup> Tangy(Hot)<option value="Mixed Pack">Mixed Pack</select>
     </td>
@@ -133,14 +141,14 @@ this payment feature. To order, select the pack size and flavor combinations tha
 	<td><input name="quantity" type="text" value="1" size="2"></td>
   </tr>
   <tr>
-	<td>			
+	<td>
 		Promo code:
 	</td>
 	<td>
-		<input type     = "text" 
+		<input type     = "text"
 				size     = "5"
 				name     = "coupcode"; />
-		<input type="button" value="Apply" 
+		<input type="button" value="Apply"
 		onclick="coupval = this.form.coupcode.value;
 		ChkCoup();" />
 	</td>
@@ -155,17 +163,17 @@ this payment feature. To order, select the pack size and flavor combinations tha
 	<input type="hidden" name="cmd" value="_cart">
 	<input type="hidden" name="business" value="orders@selectbrandsllc.com">
 	<input type="hidden" name="item_name" value="Mumbo Sauce - 3 pack">
-	
+
 	<input type="hidden" name="amount" value="15.00">
 	<input type="hidden" name="baseamt" value="15.00" />
 	<input type="hidden" name="basedes" value="Mumbo Sauce - 3 pack" />
-	
+
 	<input type="hidden" name="shipping" value="8.00">
 	<input type="hidden" name="shipping2" value="8.00">
 	<input type="hidden" name="no_shipping" value="2">
 	<input type="hidden" name="no_note" value="1">
 	<input type="hidden" name="currency_code" value="USD">
-	<input type="hidden" name="lc" value="US">	
+	<input type="hidden" name="lc" value="US">
 	<input type="hidden" name="bn" value="PP-ShopCartBF">
 	</center>
 	</td>
@@ -186,14 +194,14 @@ this payment feature. To order, select the pack size and flavor combinations tha
   	<tr><td>S&H: </td><td>$12.00</td></tr>
   	<tr><td>Qty:</td><td><input name="quantity" type="text" value="1" size="2"></td></tr>
 	<tr>
-	<td>			
+	<td>
 		Promo code:
 	</td>
 	<td>
-		<input type     = "text" 
+		<input type     = "text"
 				size     = "5"
 				name     = "coupcode"; />
-		<input type="button" value="Apply" 
+		<input type="button" value="Apply"
 		onclick="coupval = this.form.coupcode.value;
 		ChkCoup();" />
 	</td>
@@ -207,11 +215,11 @@ this payment feature. To order, select the pack size and flavor combinations tha
 		<input type="hidden" name="cmd" value="_cart">
 		<input type="hidden" name="business" value="orders@selectbrandsllc.com">
 		<input type="hidden" name="item_name" value="Mumbo Sauce - 6 pack">
-		
+
 		<input type="hidden" name="amount" value="24.00">
 		<input type="hidden" name="baseamt" value="24.00" />
 		<input type="hidden" name="basedes" value="Mumbo Sauce - 6 pack" />
-		
+
 		<input type="hidden" name="shipping" value="12.00">
 		<input type="hidden" name="shipping2" value="12.00">
 		<input type="hidden" name="no_shipping" value="2">
@@ -237,14 +245,14 @@ this payment feature. To order, select the pack size and flavor combinations tha
     <tr><td>S&H:</td><td>$15.00</td></tr>
   <tr><td>Qty:</td><td><input name="quantity" type="text" value="1" size="2"></td></tr>
 	<tr>
-	<td>			
+	<td>
 		Promo code:
 	</td>
 	<td>
-		<input type     = "text" 
+		<input type     = "text"
 				size     = "5"
 				name     = "coupcode"; />
-		<input type="button" value="Apply" 
+		<input type="button" value="Apply"
 		onclick="coupval = this.form.coupcode.value;
 		ChkCoup();" />
 	</td>
@@ -258,11 +266,11 @@ this payment feature. To order, select the pack size and flavor combinations tha
 		<input type="hidden" name="cmd" value="_cart">
 		<input type="hidden" name="business" value="orders@selectbrandsllc.com">
 		<input type="hidden" name="item_name" value="Mumbo Sauce - 12 pack">
-		
+
 		<input type="hidden" name="amount" value="37.00">
 		<input type="hidden" name="baseamt" value="37.00" />
 		<input type="hidden" name="basedes" value="Mumbo Sauce - 12 pack" />
-		
+
 		<input type="hidden" name="shipping" value="15.00">
 		<input type="hidden" name="shipping2" value="15.00">
 		<input type="hidden" name="no_shipping" value="2">
@@ -280,7 +288,7 @@ this payment feature. To order, select the pack size and flavor combinations tha
 </tr>
 <tr>
 	<td>
-	
+
 <table class="form">
   <form action="https://www.paypal.com/cgi-bin/webscr" method="post" onsubmit="this.target = 'paypal'; return ReadForm (this);" />
   <!-- <tr><td colspan="2"><center><img src="halfgallon_original_small.png" /></center></td></tr> -->
@@ -303,14 +311,14 @@ this payment feature. To order, select the pack size and flavor combinations tha
   		<td>Qty:</td><td><input name="quantity" type="text" value="1" size="2"></td>
   	</tr>
 	<tr>
-	<td>			
+	<td>
 		Promo code:
 	</td>
 	<td>
-		<input type     = "text" 
+		<input type     = "text"
 				size     = "5"
 				name     = "coupcode"; />
-		<input type="button" value="Apply" 
+		<input type="button" value="Apply"
 		onclick="coupval = this.form.coupcode.value;
 		ChkCoup();" />
 	</td>
@@ -323,11 +331,11 @@ this payment feature. To order, select the pack size and flavor combinations tha
 		<input type="hidden" name="cmd" value="_cart">
 		<input type="hidden" name="business" value="orders@selectbrandsllc.com">
 		<input type="hidden" name="item_name" value="Mumbo Sauce - 64 Ounce">
-		
+
 		<input type="hidden" name="amount" value="12.00">
 		<input type="hidden" name="baseamt" value="12.00" />
 		<input type="hidden" name="basedes" value="Mumbo Sauce - 64 ounce" />
-		
+
 		<input type="hidden" name="shipping" value="8.00">
 		<input type="hidden" name="shipping2" value="8.00">
 		<input type="hidden" name="no_shipping" value="2">
@@ -358,8 +366,8 @@ this payment feature. To order, select the pack size and flavor combinations tha
 	</td>
 </tr>
 <tr>
-  <td colspan="4" class="small_text">10.25% sales tax applied to purchases in Illinois. 
-  	S&H charges apply to purchases within the contiguous U.S. <br />*Outside of the U.S, please contact us at 
+  <td colspan="4" class="small_text">10.25% sales tax applied to purchases in Illinois.
+  	S&H charges apply to purchases within the contiguous U.S. <br />*Outside of the U.S, please contact us at
 	customerservice@selectbrandsllc.com for appropriate shipping & handling charges.
   </td>
 </tr>
@@ -383,10 +391,10 @@ this payment feature. To order, select the pack size and flavor combinations tha
 	<td colspan="2" class="marginpad">
 		<p class="boldunder">Send payment to:</p>
 		<p>Select Brands LLC<br />
-		P.O.Box 199361<br /> 
+		P.O.Box 199361<br />
 		Chicago, Illinois 60619<br />
 		</p>
-	</td>	
+	</td>
 </tr>
 </table>
 </p>
