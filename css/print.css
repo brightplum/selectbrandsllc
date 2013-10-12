@@ -1,0 +1,283 @@
+/***** Global Settings *****/
+ 
+html, body {
+border:0;
+margin:0;
+padding:0;
+}
+ 
+body {
+font:100%/1.00 arial, helvetica, sans-serif;
+}
+ 
+/***** Common Formatting *****/
+ 
+h1, h2, h3, h4, h5, h6 {
+margin:0;
+padding:0;
+font-weight:normal;
+}
+ 
+h1 {
+padding:30px 0 25px 0;
+letter-spacing:-1px;
+font:2em arial, helvetica, sans-serif;
+}
+ 
+h2 {
+padding:20px 0;
+letter-spacing:-1px;
+font:1.5em arial, helvetica, sans-serif;
+}
+ 
+h3 {
+font:1em arial, helvetica, sans-serif;
+font-weight:bold;
+}
+
+p	{
+	padding: 0pt;
+}
+
+p a	{
+	color:#de0031;
+}
+
+p.nomargin	{
+	margin:0;
+}
+ 
+ul, ol {
+	margin:0;
+	padding:5px;
+	list-style:none;
+}
+ 
+blockquote {
+margin:22px 40px;
+padding:0;
+}
+ 
+small {
+font-size:0.85em;
+}
+ 
+img {
+border:0;
+margin: 0 4pt;
+}
+
+img.redborder	{
+	border: 1pt solid #de0031;
+}
+ 
+sup {
+position:relative;
+bottom:0.3em;
+vertical-align:baseline;
+}
+ 
+sub {
+position:relative;
+bottom:-0.2em;
+vertical-align:baseline;
+}
+ 
+acronym, abbr {
+cursor:help;
+letter-spacing:1px;
+border-bottom:1px dashed;
+}
+ 
+/***** Links *****/
+ 
+a, a:visited {
+text-decoration:none;
+}
+ 
+/***** Forms *****/
+ 
+form {
+margin:0;
+padding:0;
+display:inline;
+}
+ 
+input, select, textarea {
+font:1em arial, helvetica, sans-serif;
+}
+ 
+textarea {
+line-height:1.25;
+}
+ 
+label {
+cursor:pointer;
+}
+ 
+/***** Tables *****/
+ 
+table {
+border:0;
+margin:0;
+padding:0;
+}
+
+td	{
+margin:0;
+padding:0;
+}
+
+ 
+/***** Wrapper *****/
+ 
+#wrap {
+width:960px;
+margin:0 auto;
+}
+ 
+/***** Global Classes *****/
+ 
+.clear         {
+	clear:both;
+	display: block;
+    height: 1px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+ 
+.float-left    { float:left; }
+.float-right   { float:right; }
+ 
+.text-left     { text-align:left; }
+.text-right    { text-align:right; }
+.text-center   { text-align:center; }
+.text-justify  { text-align:justify; }
+ 
+.bold          { font-weight:bold; }
+.italic        { font-style:italic; }
+.underline     { border-bottom:1px solid; }
+.highlight     { background:#ffc; }
+
+.lineheight	{line-height:2;	}
+
+.small			{ font-size: .65em; }
+.medium			{ font-size: .85em; }
+
+.upper			{ text-transform: uppercase; }
+ 
+.wrap          { width:960px;margin:0 auto; }
+
+.red	{color:red;	}
+ 
+.img-left      { float:left;margin:4px 10px 4px 0; }
+.img-right     { float:right;margin:4px 0 4px 10px; }
+ 
+.nopadding     { padding:0; }
+.noindent      { margin-left:0;padding-left:0; }
+.nobullet      { list-style:none;list-style-image:none; }
+
+/******** Layout ************/
+
+#header	{
+	margin:0;
+	padding-left:10px;
+	height:10px;
+}
+  
+
+div#container	{
+	text-align:left;
+	width:800px;
+	overflow:hidden;
+	margin:0;
+}
+
+
+
+td#content	{
+	/*float:right;*/
+	width:800px;
+	font-family: Arial;
+	vertical-align: top;
+	/*border-left:245px solid #fff;
+	margin-left:-245px; */
+}
+
+td#navigation	{
+	float: right;
+	width:10px;
+	vertical-align: top;
+	left:0;	
+}
+
+td#eighteenounce	{
+	height: 10px;
+}
+
+td#sixtyfourounce	{
+	height: 10px;
+}
+
+dl.menu	{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 10px;
+}
+
+dl.menu,dd.menu	{
+	margin: 0;
+}
+
+dt a	{
+	color:#de0031;
+}
+
+dt.menu a	{
+	display: none;
+	width: 100%;
+	height: 3em;
+	padding: 0;
+	text-decoration: none;
+	font-weight: bold;
+	border: none;
+	border-style: outset;
+	text-decoration:none;
+	color: #fff;
+	line-height: 1em;
+}
+
+dt.recipe	{
+	margin:.5em 0pt;
+}
+
+dd.menu a	{
+	text-decoration:none;
+	color:#de0031;
+}
+
+dt.menu a:hover, dd.menu a:hover	{
+	color: black;	
+}
+
+html>body dt a:active	{ /* Apply mousedown effect (non IE browsers only) */
+	border-style: inset;
+}
+
+.break	{
+	page-break-before:always;
+}
+
+div#footer	{
+	background: #333;
+	color: #FFF;
+	clear:both;
+	width:100%;
+}
+
+div#footer p	{
+	margin:0;
+	padding:5px 10px
+}
