@@ -130,12 +130,12 @@ this payment feature. To order, select the pack size and flavor combinations tha
   </tr>
   <tr>
     <td>Price:</td>
-	<td>$15.00</td>
+	<td>$32.00</td>
   </tr>
-  <tr>
+  <!--<tr>
     <td>S&H: </td>
 	<td>&nbsp;&nbsp;$8.00</td>
-  </tr>
+  </tr>-->
   <tr>
     <td>Qty:</td>
 	<td><input name="quantity" type="text" value="1" size="2"></td>
@@ -164,13 +164,13 @@ this payment feature. To order, select the pack size and flavor combinations tha
 	<input type="hidden" name="business" value="orders@selectbrandsllc.com">
 	<input type="hidden" name="item_name" value="Mumbo Sauce - 3 pack">
 
-	<input type="hidden" name="amount" value="15.00">
-	<input type="hidden" name="baseamt" value="15.00" />
+	<input type="hidden" name="amount" value="32.00">
+	<input type="hidden" name="baseamt" value="32.00" />
 	<input type="hidden" name="basedes" value="Mumbo Sauce - 3 pack" />
 
-	<input type="hidden" name="shipping" value="8.00">
+	<!--<input type="hidden" name="shipping" value="8.00">
 	<input type="hidden" name="shipping2" value="8.00">
-	<input type="hidden" name="no_shipping" value="2">
+	<input type="hidden" name="no_shipping" value="2">-->
 	<input type="hidden" name="no_note" value="1">
 	<input type="hidden" name="currency_code" value="USD">
 	<input type="hidden" name="lc" value="US">
@@ -190,8 +190,8 @@ this payment feature. To order, select the pack size and flavor combinations tha
   	<tr><td colspan="2" class="boldunder">Mumbo<sup>&reg;</sup> Sauce - 6 pack</td></tr>
   	<tr><td valign="middle">
 		<input type="hidden" name="on0" value="Flavor">Flavor:</td><td><select name="os0"><option value="Mumbo Original">Mumbo<sup>&reg;</sup> Original<option value="Mumbo Hickory">Mumbo<sup>&reg;</sup> Hickory<option value="Mumbo Tangy(Hot)">Mumbo<sup>&reg;</sup> Tangy(Hot)<option value="Mixed Pack">Mixed Pack</select></td></tr>
-  	<tr><td>Price:</TD><td>$24.00</td></tr>
-  	<tr><td>S&H: </td><td>$12.00</td></tr>
+  	<tr><td>Price:</TD><td>$48.00</td></tr>
+  	<!--<tr><td>S&H: </td><td>$12.00</td></tr>-->
   	<tr><td>Qty:</td><td><input name="quantity" type="text" value="1" size="2"></td></tr>
 	<tr>
 	<td>
@@ -216,13 +216,13 @@ this payment feature. To order, select the pack size and flavor combinations tha
 		<input type="hidden" name="business" value="orders@selectbrandsllc.com">
 		<input type="hidden" name="item_name" value="Mumbo Sauce - 6 pack">
 
-		<input type="hidden" name="amount" value="24.00">
-		<input type="hidden" name="baseamt" value="24.00" />
+		<input type="hidden" name="amount" value="48.00">
+		<input type="hidden" name="baseamt" value="48.00" />
 		<input type="hidden" name="basedes" value="Mumbo Sauce - 6 pack" />
 
-		<input type="hidden" name="shipping" value="12.00">
+		<!--<input type="hidden" name="shipping" value="12.00">
 		<input type="hidden" name="shipping2" value="12.00">
-		<input type="hidden" name="no_shipping" value="2">
+		<input type="hidden" name="no_shipping" value="2">-->
 		<input type="hidden" name="no_note" value="1">
 		<input type="hidden" name="currency_code" value="USD">
 		<input type="hidden" name="lc" value="US">
@@ -241,8 +241,8 @@ this payment feature. To order, select the pack size and flavor combinations tha
   <tr><td colspan="2" class="boldunder">Mumbo<sup>&reg;</sup> Sauce - 12 pack</td></tr>
   <tr><TD valign="middle">
 	<input type="hidden" name="on0" value="Flavor">Flavor:</td><td><select name="os0"><option value="Mumbo Original">Mumbo<sup>&reg;</sup> Original<option value="Mumbo Hickory">Mumbo<sup>&reg;</sup> Hickory<option value="Mumbo Tangy(Hot)">Mumbo<sup>&reg;</sup> Tangy(Hot)<option value="Mixed Pack">Mixed Pack</select></td></tr>
-  <tr><td>Price:</td><td>$37.00</td></tr>
-    <tr><td>S&H:</td><td>$15.00</td></tr>
+  <tr><td>Price:</td><td>$72.00</td></tr>
+    <!--<tr><td>S&H:</td><td>$15.00</td></tr>-->
   <tr><td>Qty:</td><td><input name="quantity" type="text" value="1" size="2"></td></tr>
 	<tr>
 	<td>
@@ -267,13 +267,13 @@ this payment feature. To order, select the pack size and flavor combinations tha
 		<input type="hidden" name="business" value="orders@selectbrandsllc.com">
 		<input type="hidden" name="item_name" value="Mumbo Sauce - 12 pack">
 
-		<input type="hidden" name="amount" value="37.00">
-		<input type="hidden" name="baseamt" value="37.00" />
+		<input type="hidden" name="amount" value="72.00">
+		<input type="hidden" name="baseamt" value="72.00" />
 		<input type="hidden" name="basedes" value="Mumbo Sauce - 12 pack" />
 
-		<input type="hidden" name="shipping" value="15.00">
+		<!--<input type="hidden" name="shipping" value="15.00">
 		<input type="hidden" name="shipping2" value="15.00">
-		<input type="hidden" name="no_shipping" value="2">
+		<input type="hidden" name="no_shipping" value="2">-->
 		<input type="hidden" name="no_note" value="1">
 		<input type="hidden" name="currency_code" value="USD">
 		<input type="hidden" name="lc" value="US">
@@ -301,12 +301,12 @@ this payment feature. To order, select the pack size and flavor combinations tha
   </tr>
   	<tr>
   		<td>Price:</td>
-  		<td>$12.00</td>
+  		<td>$24.00</td>
   	</tr>
-  	<tr>
+  	<!--<tr>
   		<td>S&H: </td>
   		<td>$8.00</td>
-  	</tr>
+  	</tr>-->
   	<tr>
   		<td>Qty:</td><td><input name="quantity" type="text" value="1" size="2"></td>
   	</tr>
@@ -332,13 +332,13 @@ this payment feature. To order, select the pack size and flavor combinations tha
 		<input type="hidden" name="business" value="orders@selectbrandsllc.com">
 		<input type="hidden" name="item_name" value="Mumbo Sauce - 64 Ounce">
 
-		<input type="hidden" name="amount" value="12.00">
-		<input type="hidden" name="baseamt" value="12.00" />
+		<input type="hidden" name="amount" value="24.00">
+		<input type="hidden" name="baseamt" value="24.00" />
 		<input type="hidden" name="basedes" value="Mumbo Sauce - 64 ounce" />
 
-		<input type="hidden" name="shipping" value="8.00">
+		<!--<input type="hidden" name="shipping" value="8.00">
 		<input type="hidden" name="shipping2" value="8.00">
-		<input type="hidden" name="no_shipping" value="2">
+		<input type="hidden" name="no_shipping" value="2">-->
 		<input type="hidden" name="no_note" value="1">
 		<input type="hidden" name="currency_code" value="USD">
 		<input type="hidden" name="lc" value="US">
